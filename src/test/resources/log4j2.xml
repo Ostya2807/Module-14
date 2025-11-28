@@ -10,6 +10,7 @@
                      filePattern="target/logs/test-%d{yyyy-MM-dd}.log"
                      append="true">
             <PatternLayout pattern="[%d{HH:mm:ss}] %-5level [%X{testName}] %c{1} - %msg%n"/>
+
             <Policies>
                 <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
             </Policies>

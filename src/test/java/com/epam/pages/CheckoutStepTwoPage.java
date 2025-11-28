@@ -20,14 +20,15 @@ public class CheckoutStepTwoPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    public void clickToFinishButton(){
+    public void clickToFinishButton() {
+        waitForElementToBeVisible(finishButton);
         finishButton.click();
         logger.info("Finish button clicked!");
     }
 
-    public String getUrlOfThePage(){
+    public String getUrlOfThePage() {
         waitForElementToBeVisible(finishButton);
-        logger.info("Given URL: " +driver.getCurrentUrl());
+        logger.info("Given URL: " + driver.getCurrentUrl());
         return driver.getCurrentUrl();
     }
 }

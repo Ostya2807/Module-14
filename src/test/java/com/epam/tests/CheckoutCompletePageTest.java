@@ -38,6 +38,7 @@ public class CheckoutCompletePageTest extends CommonConditions {
         inventoryPage.openCartPageWithShoppingCartIcon();
         cartPage.clickToCheckout();
         checkoutStepOnePage.fillCheckoutForm("Vass", "Jennő", "1032");
+        checkoutStepOnePage.clickContinue();
         checkoutStepTwoPage.clickToFinishButton();
         Assert.assertEquals(checkoutCompletePage.getCompleteHeaderText(), "Thank you for your order!");
     }

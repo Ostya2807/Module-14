@@ -9,8 +9,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 
-import java.time.Duration;
-
 @Listeners({TestListener.class})
 public abstract class CommonConditions {
     protected WebDriver driver;
