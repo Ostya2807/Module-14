@@ -7,13 +7,21 @@ import java.util.List;
 
 public class UserCreator {
 
-    private static final String TEST_DATA_USERNAME ="testdata.user.name";
-    private static final String TEST_DATA_PASSWORD ="testdata.user.password";
-    private static final String TEST_DATA_USERNAMES ="testdata.user.names";
+    private static final String TEST_DATA_USERNAME = "testdata.user.name";
+    private static final String TEST_DATA_PASSWORD = "testdata.user.password";
+    private static final String TEST_DATA_USERNAMES = "testdata.user.names";
 
-    public static User withAllCredentials(){
+    public static User withAllCredentials() {
         return new User(TestDataReader.getTestData(TEST_DATA_USERNAME),
                 TestDataReader.getTestData(TEST_DATA_PASSWORD));
+    }
+
+    public static User withWrongPassword() {
+        return new User(TestDataReader.getTestData(TEST_DATA_USERNAME), "invalid");
+    }
+
+    public static User withInvalidUsername() {
+        return new User("invalid", TEST_DATA_PASSWORD);
     }
 
 

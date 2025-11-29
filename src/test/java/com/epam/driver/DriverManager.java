@@ -13,7 +13,7 @@ public class DriverManager {
     public static WebDriver getDriver() {
         if (driver.get() == null) {
 
-            String browser = System.getProperty("browser");
+            String browser = System.getProperty("browser", "firefox");
             DriverStrategy strategy = DriverFactory.getStrategy(browser);
 
             WebDriver webDriver = strategy.createDriver();

@@ -30,4 +30,9 @@ public class LoginPage extends BasePage {
         loginButton.click();
         logger.info("Logged in!");
     }
+
+    public boolean errorMessageExist(){
+        waitForElementToBeVisible(errorMessage);
+        return errorMessage.isDisplayed();
+    }
 }
